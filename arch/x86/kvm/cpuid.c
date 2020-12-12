@@ -1114,18 +1114,49 @@ EXPORT_SYMBOL_GPL(kvm_cpuid);
 
 int kvm_emulate_cpuid(struct kvm_vcpu *vcpu)
 {
-	u32 eax, ebx, ecx, edx;
+    u32 eax, ebx, ecx, edx, sub_leaf;
+    u64 cycles;
 
-	if (cpuid_fault_enabled(vcpu) && !kvm_require_cpl(vcpu, 0))
-		return 1;
+    if (cpuid_fault_enabled(vcpu) && !kvm_require_cpl(vcpu, 0))
+        return 1;
 
-	eax = kvm_rax_read(vcpu);
-	ecx = kvm_rcx_read(vcpu);
-	kvm_cpuid(vcpu, &eax, &ebx, &ecx, &edx, false);
-	kvm_rax_write(vcpu, eax);
-	kvm_rbx_write(vcpu, ebx);
-	kvm_rcx_write(vcpu, ecx);
-	kvm_rdx_write(vcpu, edx);
-	return kvm_skip_emulated_instruction(vcpu);
+    eax = kvm_rax_read(vcpu);
+    if (eax == 0x4FFFFFFF) {
+        eax = atomic_read(&vcpu->kvm->exit_count);
+        cycles = (u64)atomic64_read(&vcpu->kvm->cycle_count);
+        // https://tuxthink.blogspot.com/2011/10/atomic-variables.html
+        // https://stackoverflow.com/questions/2810280/how-to-store-a-64-bit-integer-in-two-32-bit-integers-and-convert-back-again
+        ebx = (u32)((cycles & 0xFFFFFFFF00000000LL) >> 32);
+        ecx = (u32)(cycles & 0xFFFFFFFFLL);
+        kvm_info("leaf = 0x4FFFFFFF, exits = %u, cycles = %llu, cycles_h = %u, cycles_l = %u \n", eax, cycles, ebx, ecx);
+    } else if(eax == 0x4FFFFFFE) {
+        ecx = kvm_rcx_read(vcpu);
+		sub_leaf = ecx;
+		ecx = 0;
+        if (sub_leaf < EXIT_REASON_EXCEPTION_NMI || sub_leaf == 35 || sub_leaf == 38 || sub_leaf == 42 || sub_leaf == 65 || sub_leaf > EXIT_REASON_TPAUSE) {
+            /* not defined in sdm */
+            eax = 0;
+            edx = 0xFFFFFFFF;
+            kvm_info("leaf = 0x4FFFFFFE subleaf =%u, eax = %u, ebx = %u, ecx = %u, edx = %u \n", sub_leaf, eax, ebx, ecx, edx);
+        } else {
+            /* defined in sdm, maybe defined in kvm */
+            eax = atomic_read(&vcpu->kvm->exit_reason_counts[sub_leaf]);
+			kvm_info("leaf = 0x4FFFFFFE subleaf = %u, eax = %u, ebx = %u, ecx = %u, edx = %u \n", sub_leaf, eax, ebx, ecx, edx);
+        }
+    } else if(eax == 0x4FFFFFFD) {
+		u32 i;
+		for (i = 0; i <= EXIT_REASON_TPAUSE; i++) {
+			kvm_info("leaf = 0x4FFFFFFD exit reason = %u, count = %u\n", i, atomic_read(&vcpu->kvm->exit_reason_counts[i]));
+		}
+	} else {
+        ecx = kvm_rcx_read(vcpu);
+        kvm_cpuid(vcpu, &eax, &ebx, &ecx, &edx, false);
+    }
+    kvm_rax_write(vcpu, eax);
+    kvm_rbx_write(vcpu, ebx);
+    kvm_rcx_write(vcpu, ecx);
+    kvm_rdx_write(vcpu, edx);
+    return kvm_skip_emulated_instruction(vcpu);
 }
+
 EXPORT_SYMBOL_GPL(kvm_emulate_cpuid);

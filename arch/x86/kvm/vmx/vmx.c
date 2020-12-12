@@ -66,6 +66,8 @@
 MODULE_AUTHOR("Qumranet");
 MODULE_LICENSE("GPL");
 
+static int vmx_handle_exit_inner(struct kvm_vcpu *vcpu, fastpath_t exit_fastpath);
+
 #ifdef MODULE
 static const struct x86_cpu_id vmx_cpu_id[] = {
 	X86_MATCH_FEATURE(X86_FEATURE_VMX, NULL),
@@ -5925,10 +5927,32 @@ void dump_vmcs(void)
 }
 
 /*
+ * Intercept exit.
+ * Increment counters and return result of vmx_handle_exit_inner.
+ */
+static int vmx_handle_exit(struct kvm_vcpu *vcpu, fastpath_t exit_fastpath)
+{
+    int ret;
+    u64 start = rdtsc();
+    struct vcpu_vmx *vmx = to_vmx(vcpu);
+    u32 exit_reason = vmx->exit_reason;
+    atomic_inc(&vcpu->kvm->exit_count);
+    if (exit_reason >= EXIT_REASON_EXCEPTION_NMI && exit_reason <= EXIT_REASON_TPAUSE) {
+        atomic_inc(&vcpu->kvm->exit_reason_counts[exit_reason]);
+    } else {
+        kvm_info("Found out of range exit reason: %u \n", exit_reason);
+    }
+
+    ret = vmx_handle_exit_inner(vcpu, exit_fastpath);
+    atomic64_add((s64)(rdtsc() - start), &vcpu->kvm->cycle_count);
+    return ret;
+}
+
+/*
  * The guest has exited.  See if we can fix it or if we need userspace
  * assistance.
  */
-static int vmx_handle_exit(struct kvm_vcpu *vcpu, fastpath_t exit_fastpath)
+static int vmx_handle_exit_inner(struct kvm_vcpu *vcpu, fastpath_t exit_fastpath)
 {
 	struct vcpu_vmx *vmx = to_vmx(vcpu);
 	u32 exit_reason = vmx->exit_reason;

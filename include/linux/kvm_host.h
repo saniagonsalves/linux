@@ -429,6 +429,10 @@ static inline int kvm_arch_vcpu_memslots_id(struct kvm_vcpu *vcpu)
 }
 #endif
 
+#ifndef KVM_INTEL_EXITS
+#define KVM_INTEL_EXITS 68
+#endif
+
 /*
  * Note:
  * memslots are not sorted by id anymore, please use id_to_memslot()
@@ -505,6 +509,10 @@ struct kvm {
 	struct srcu_struct irq_srcu;
 	pid_t userspace_pid;
 	unsigned int max_halt_poll_ns;
+
+	atomic_t exit_count;
+	atomic64_t cycle_count;
+	atomic_t exit_reason_counts[KVM_INTEL_EXITS];
 };
 
 #define kvm_err(fmt, ...) \
