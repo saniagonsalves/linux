@@ -430,7 +430,7 @@ static inline int kvm_arch_vcpu_memslots_id(struct kvm_vcpu *vcpu)
 #endif
 
 #ifndef KVM_INTEL_EXITS
-#define KVM_INTEL_EXITS 68
+#define KVM_INTEL_EXITS 69
 #endif
 
 /*

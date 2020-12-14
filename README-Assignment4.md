@@ -1,147 +1,149 @@
 #CMPE283 Assignment 4
 1. I've completed this lab myself.
 2. a. With EPT=1 \
-   ``[  265.072223] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 0, count = 5471 `` \
-   ``[  265.072228] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 1, count = 129521 `` \
-   ``[  265.072231] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 2, count = 0 `` \
-   ``[  265.072233] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 3, count = 0 `` \
-   ``[  265.072235] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 4, count = 0 `` \
-   ``[  265.072237] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 5, count = 0 `` \
-   ``[  265.072239] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 6, count = 0 `` \
-   ``[  265.072241] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 7, count = 23323 `` \
-   ``[  265.072243] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 8, count = 0 `` \
-   ``[  265.072245] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 9, count = 0 `` \
-   ``[  265.072247] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 10, count = 33455 `` \
-   ``[  265.072249] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 11, count = 0 `` \
-   ``[  265.072251] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 12, count = 229074 `` \
-   ``[  265.072253] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 13, count = 0 `` \
-   ``[  265.072255] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 14, count = 0 `` \
-   ``[  265.072257] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 15, count = 0 `` \
-   ``[  265.072259] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 16, count = 0 `` \
-   ``[  265.072261] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 17, count = 0 `` \
-   ``[  265.072263] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 18, count = 5572 `` \
-   ``[  265.072265] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 19, count = 0 `` \
-   ``[  265.072267] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 20, count = 0 `` \
-   ``[  265.072269] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 21, count = 0 `` \
-   ``[  265.072271] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 22, count = 0 `` \
-   ``[  265.072274] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 23, count = 0 `` \
-   ``[  265.072276] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 24, count = 0 `` \
-   ``[  265.072278] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 25, count = 0 `` \
-   ``[  265.072280] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 26, count = 0 `` \
-   ``[  265.072282] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 27, count = 0 `` \
-   ``[  265.072284] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 28, count = 1266470 `` \
-   ``[  265.072286] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 29, count = 12 `` \
-   ``[  265.072288] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 30, count = 82228 `` \
-   ``[  265.072290] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 31, count = 4173 `` \
-   ``[  265.072292] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 32, count = 124256 `` \
-   ``[  265.072294] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 33, count = 0 `` \
-   ``[  265.072296] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 34, count = 0 `` \
-   ``[  265.072298] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 35, count = 0 `` \
-   ``[  265.072300] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 36, count = 0 `` \
-   ``[  265.072302] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 37, count = 0 `` \
-   ``[  265.072304] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 38, count = 0 `` \
-   ``[  265.072306] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 39, count = 0 `` \
-   ``[  265.072308] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 40, count = 9830 `` \
-   ``[  265.072310] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 41, count = 0 `` \
-   ``[  265.072312] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 42, count = 0 `` \
-   ``[  265.072314] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 43, count = 0 `` \
-   ``[  265.072316] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 44, count = 11 `` \
-   ``[  265.072318] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 45, count = 0 `` \
-   ``[  265.072320] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 46, count = 56 `` \
-   ``[  265.072322] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 47, count = 22 `` \
-   ``[  265.072325] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 48, count = 291635 `` \
-   ``[  265.072327] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 49, count = 217002 `` \
-   ``[  265.072329] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 50, count = 0 `` \
-   ``[  265.072331] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 51, count = 0 `` \
-   ``[  265.072333] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 52, count = 111985 `` \
-   ``[  265.072335] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 53, count = 0 `` \
-   ``[  265.072337] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 54, count = 13 `` \
-   ``[  265.072339] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 55, count = 13 `` \
-   ``[  265.072341] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 56, count = 0 `` \
-   ``[  265.072343] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 57, count = 0 `` \
-   ``[  265.072345] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 58, count = 0 `` \
-   ``[  265.072348] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 59, count = 0 `` \
-   ``[  265.072350] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 60, count = 0 `` \
-   ``[  265.072352] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 61, count = 0 `` \
-   ``[  265.072354] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 62, count = 0 `` \
-   ``[  265.072356] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 63, count = 0 `` \
-   ``[  265.072358] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 64, count = 0 `` \
-   ``[  265.072360] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 65, count = 0 `` \
-   ``[  265.072362] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 66, count = 0 `` \
-   ``[  265.072364] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 67, count = 0 `` \
-   ``[  265.072366] kvm [2285]: leaf = 0x4FFFFFFD exit reason = 68, count = 0 `` \
-   b. With EPT=0 \
-   ``[  753.830662] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 0, count = 4775723`` \
-   ``[  753.830664] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 1, count = 2606190`` \
-   ``[  753.830664] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 2, count = 0`` \
-   ``[  753.830665] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 3, count = 0`` \
-   ``[  753.830665] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 4, count = 0`` \
-   ``[  753.830666] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 5, count = 0`` \
-   ``[  753.830666] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 6, count = 0`` \
-   ``[  753.830667] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 7, count = 67996`` \
-   ``[  753.830667] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 8, count = 0`` \
-   ``[  753.830668] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 9, count = 0`` \
-   ``[  753.830668] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 10, count = 33138`` \
-   ``[  753.830669] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 11, count = 0`` \
-   ``[  753.830669] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 12, count = 237514`` \
-   ``[  753.830669] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 13, count = 0`` \
-   ``[  753.830670] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 14, count = 401944`` \
-   ``[  753.830670] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 15, count = 0`` \
-   ``[  753.830671] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 16, count = 0`` \
-   ``[  753.830671] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 17, count = 0`` \
-   ``[  753.830672] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 18, count = 6070`` \
-   ``[  753.830672] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 19, count = 0`` \
-   ``[  753.830673] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 20, count = 0`` \
-   ``[  753.830673] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 21, count = 0`` \
-   ``[  753.830673] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 22, count = 0`` \
-   ``[  753.830674] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 23, count = 0`` \
-   ``[  753.830674] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 24, count = 0`` \
-   ``[  753.830675] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 25, count = 0`` \
-   ``[  753.830675] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 26, count = 0`` \
-   ``[  753.830676] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 27, count = 0`` \
-   ``[  753.830676] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 28, count = 19233208`` \
-   ``[  753.830677] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 29, count = 12`` \
-   ``[  753.830677] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 30, count = 63666`` \
-   ``[  753.830678] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 31, count = 3462`` \
-   ``[  753.830678] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 32, count = 265925`` \
-   ``[  753.830679] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 33, count = 0`` \
-   ``[  753.830679] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 34, count = 0`` \
-   ``[  753.830680] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 35, count = 0`` \
-   ``[  753.830680] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 36, count = 0`` \
-   ``[  753.830680] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 37, count = 0`` \
-   ``[  753.830681] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 38, count = 0`` \
-   ``[  753.830681] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 39, count = 0`` \
-   ``[  753.830682] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 40, count = 26375`` \
-   ``[  753.830682] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 41, count = 0`` \
-   ``[  753.830683] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 42, count = 0`` \
-   ``[  753.830683] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 43, count = 0`` \
-   ``[  753.830684] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 44, count = 11`` \
-   ``[  753.830684] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 45, count = 0`` \
-   ``[  753.830685] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 46, count = 56`` \
-   ``[  753.830685] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 47, count = 22`` \
-   ``[  753.830685] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 48, count = 0`` \
-   ``[  753.830686] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 49, count = 0`` \
-   ``[  753.830686] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 50, count = 0`` \
-   ``[  753.830687] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 51, count = 0`` \
-   ``[  753.830687] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 52, count = 183150`` \
-   ``[  753.830688] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 53, count = 0`` \
-   ``[  753.830688] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 54, count = 2`` \
-   ``[  753.830689] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 55, count = 13`` \
-   ``[  753.830689] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 56, count = 0`` \
-   ``[  753.830689] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 57, count = 0`` \
-   ``[  753.830690] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 58, count = 382595`` \
-   ``[  753.830690] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 59, count = 0`` \
-   ``[  753.830691] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 60, count = 0`` \
-   ``[  753.830691] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 61, count = 0`` \
-   ``[  753.830692] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 62, count = 0`` \
-   ``[  753.830692] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 63, count = 0`` \
-   ``[  753.830692] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 64, count = 0`` \
-   ``[  753.830693] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 65, count = 0`` \
-   ``[  753.830693] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 66, count = 0`` \
-   ``[  753.830694] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 67, count = 0`` \
-   ``[  753.830694] kvm [3892]: leaf = 0x4FFFFFFD exit reason = 68, count = 4278177792``
+   ``[  293.809922] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 0, count = 5875`` \
+   ``[  293.809927] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 1, count = 114485`` \
+   ``[  293.809930] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 2, count = 0`` \
+   ``[  293.809932] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 3, count = 0`` \
+   ``[  293.809934] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 4, count = 0`` \
+   ``[  293.809936] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 5, count = 0`` \
+   ``[  293.809938] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 6, count = 0`` \
+   ``[  293.809940] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 7, count = 25074`` \
+   ``[  293.809942] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 8, count = 0`` \
+   ``[  293.809944] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 9, count = 0`` \
+   ``[  293.809946] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 10, count = 33223`` \
+   ``[  293.809948] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 11, count = 0`` \
+   ``[  293.809950] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 12, count = 239769`` \
+   ``[  293.809952] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 13, count = 0`` \
+   ``[  293.809955] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 14, count = 0`` \
+   ``[  293.809957] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 15, count = 0`` \
+   ``[  293.809959] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 16, count = 0`` \
+   ``[  293.809961] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 17, count = 0`` \
+   ``[  293.809963] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 18, count = 5593`` \
+   ``[  293.809965] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 19, count = 0`` \
+   ``[  293.809967] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 20, count = 0`` \
+   ``[  293.809969] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 21, count = 0`` \
+   ``[  293.809971] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 22, count = 0`` \
+   ``[  293.809973] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 23, count = 0`` \
+   ``[  293.809975] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 24, count = 0`` \
+   ``[  293.809977] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 25, count = 0`` \
+   ``[  293.809979] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 26, count = 0`` \
+   ``[  293.809981] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 27, count = 0`` \
+   ``[  293.809983] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 28, count = 392884`` \
+   ``[  293.809985] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 29, count = 12`` \
+   ``[  293.809987] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 30, count = 88119`` \
+   ``[  293.809989] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 31, count = 4048`` \
+   ``[  293.809991] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 32, count = 127470`` \
+   ``[  293.809994] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 33, count = 0`` \
+   ``[  293.809996] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 34, count = 0`` \
+   ``[  293.809997] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 35, count = 0`` \
+   ``[  293.810000] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 36, count = 0`` \
+   ``[  293.810002] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 37, count = 0`` \
+   ``[  293.810004] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 38, count = 0`` \
+   ``[  293.810006] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 39, count = 0`` \
+   ``[  293.810008] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 40, count = 9938`` \
+   ``[  293.810010] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 41, count = 0`` \
+   ``[  293.810012] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 42, count = 0`` \
+   ``[  293.810014] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 43, count = 0`` \
+   ``[  293.810016] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 44, count = 11`` \
+   ``[  293.810018] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 45, count = 0`` \
+   ``[  293.810020] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 46, count = 56`` \
+   ``[  293.810022] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 47, count = 22`` \
+   ``[  293.810024] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 48, count = 291881`` \
+   ``[  293.810026] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 49, count = 223906`` \
+   ``[  293.810028] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 50, count = 0`` \
+   ``[  293.810030] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 51, count = 0`` \
+   ``[  293.810032] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 52, count = 111820`` \
+   ``[  293.810034] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 53, count = 0`` \
+   ``[  293.810036] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 54, count = 13`` \
+   ``[  293.810038] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 55, count = 13`` \
+   ``[  293.810040] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 56, count = 0`` \
+   ``[  293.810042] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 57, count = 0`` \
+   ``[  293.810044] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 58, count = 0`` \
+   ``[  293.810046] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 59, count = 0`` \
+   ``[  293.810048] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 60, count = 0`` \
+   ``[  293.810050] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 61, count = 0`` \
+   ``[  293.810052] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 62, count = 0`` \
+   ``[  293.810054] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 63, count = 0`` \
+   ``[  293.810056] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 64, count = 0`` \
+   ``[  293.810058] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 65, count = 0`` \
+   ``[  293.810060] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 66, count = 0`` \
+   ``[  293.810062] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 67, count = 0`` \
+   ``[  293.810064] kvm [2163]: leaf = 0x4FFFFFFD exit reason = 68, count = 0``
    
-3. I observed a huge increase in the number of exits especially exits 0, 28, 68. It is expected because the VMM is now much more involved in virtual memory management of the host because with ept=0 we are using shadow paging. So we see huge increase in exits 0 (exceptions, in the case of shadow paging much more page faults have to be handled by vmm) and 28 (CR access)
-4. With ept=1 we use nested paging and with ept=0 we use shadow paging.
+   b. With EPT=0 \
+   ``[ 1041.514910] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 0, count = 4935691`` \
+   ``[ 1041.514927] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 1, count = 2675629`` \
+   ``[ 1041.514928] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 2, count = 0`` \
+   ``[ 1041.514928] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 3, count = 0`` \
+   ``[ 1041.514929] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 4, count = 0`` \
+   ``[ 1041.514929] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 5, count = 0`` \
+   ``[ 1041.514930] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 6, count = 0`` \
+   ``[ 1041.514930] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 7, count = 68622`` \
+   ``[ 1041.514930] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 8, count = 0`` \
+   ``[ 1041.514931] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 9, count = 0`` \
+   ``[ 1041.514931] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 10, count = 33102`` \
+   ``[ 1041.514932] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 11, count = 0`` \
+   ``[ 1041.514932] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 12, count = 230678`` \
+   ``[ 1041.514933] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 13, count = 0`` \
+   ``[ 1041.514933] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 14, count = 432395`` \
+   ``[ 1041.514934] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 15, count = 0`` \
+   ``[ 1041.514934] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 16, count = 0`` \
+   ``[ 1041.514935] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 17, count = 0`` \
+   ``[ 1041.514935] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 18, count = 5974`` \
+   ``[ 1041.514935] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 19, count = 0`` \
+   ``[ 1041.514936] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 20, count = 0`` \
+   ``[ 1041.514936] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 21, count = 0`` \
+   ``[ 1041.514937] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 22, count = 0`` \
+   ``[ 1041.514937] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 23, count = 0`` \
+   ``[ 1041.514938] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 24, count = 0`` \
+   ``[ 1041.514938] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 25, count = 0`` \
+   ``[ 1041.514939] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 26, count = 0`` \
+   ``[ 1041.514939] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 27, count = 0`` \
+   ``[ 1041.514940] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 28, count = 19556311`` \
+   ``[ 1041.514940] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 29, count = 12`` \
+   ``[ 1041.514941] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 30, count = 62173`` \
+   ``[ 1041.514941] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 31, count = 3428`` \
+   ``[ 1041.514942] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 32, count = 270354`` \
+   ``[ 1041.514942] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 33, count = 0`` \
+   ``[ 1041.514942] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 34, count = 0`` \
+   ``[ 1041.514943] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 35, count = 0`` \
+   ``[ 1041.514943] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 36, count = 0`` \
+   ``[ 1041.514944] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 37, count = 0`` \
+   ``[ 1041.514944] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 38, count = 0`` \
+   ``[ 1041.514945] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 39, count = 0`` \
+   ``[ 1041.514945] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 40, count = 18162`` \
+   ``[ 1041.514946] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 41, count = 0`` \
+   ``[ 1041.514946] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 42, count = 0`` \
+   ``[ 1041.514946] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 43, count = 0`` \
+   ``[ 1041.514947] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 44, count = 11`` \
+   ``[ 1041.514947] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 45, count = 0`` \
+   ``[ 1041.514948] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 46, count = 56`` \
+   ``[ 1041.514948] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 47, count = 22`` \
+   ``[ 1041.514949] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 48, count = 0`` \
+   ``[ 1041.514949] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 49, count = 0`` \
+   ``[ 1041.514950] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 50, count = 0`` \
+   ``[ 1041.514950] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 51, count = 0`` \
+   ``[ 1041.514951] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 52, count = 182608`` \
+   ``[ 1041.514951] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 53, count = 0`` \
+   ``[ 1041.514951] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 54, count = 2`` \
+   ``[ 1041.514952] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 55, count = 13`` \
+   ``[ 1041.514952] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 56, count = 0`` \
+   ``[ 1041.514953] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 57, count = 0`` \
+   ``[ 1041.514953] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 58, count = 413093`` \
+   ``[ 1041.514954] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 59, count = 0`` \
+   ``[ 1041.514954] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 60, count = 0`` \
+   ``[ 1041.514955] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 61, count = 0`` \
+   ``[ 1041.514955] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 62, count = 0`` \
+   ``[ 1041.514956] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 63, count = 0`` \
+   ``[ 1041.514956] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 64, count = 0`` \
+   ``[ 1041.514956] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 65, count = 0`` \
+   ``[ 1041.514957] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 66, count = 0`` \
+   ``[ 1041.514957] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 67, count = 0`` \
+   ``[ 1041.514958] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 68, count = 0`` 
+
+
+3. I observed a huge increase in the number of exits especially exits 0, 14, 28, 58. It is expected because the VMM is now much more involved in virtual memory management of the guest because with ept=0 we are using shadow paging. So we see huge increase in exits 0 (exceptions, in the case of shadow paging much more page faults have to be handled by vmm), 14(INVLPG), 28 (CR access), 58 (INVPCID). Also expected is the O values for exists 48(EPT violation) and 49(EPT misconfiguration) because ept = 0;
+4. With ept=1 we use nested paging and with ept=0 we use shadow paging, so we see increase in exits which are used in shadow paging and a decrease in exits related to nested paging.
 
 
