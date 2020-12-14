@@ -143,7 +143,7 @@
    ``[ 1041.514958] kvm [5648]: leaf = 0x4FFFFFFD exit reason = 68, count = 0`` 
 
 
-3. I observed a huge increase in the number of exits especially exits 0, 14, 28, 58. It is expected because the VMM is now much more involved in virtual memory management of the guest because with ept=0 we are using shadow paging. So we see huge increase in exits 0 (exceptions, in the case of shadow paging much more page faults have to be handled by vmm), 14(INVLPG), 28 (CR access), 58 (INVPCID). Also expected is the O values for exists 48(EPT violation) and 49(EPT misconfiguration) because ept = 0;
+3. I observed a huge increase in the number of exits especially exits 0, 14, 28, 58. It is expected because the VMM is now much more involved in virtual memory management of the guest because with ept=0 we are using shadow paging. So we see huge increase in exits 0 (exceptions, in the case of shadow paging much more page faults have to be handled by vmm), 14(INVLPG), 28 (CR access), 58 (INVPCID). Also expected is the 0 values for exists 48(EPT violation) and 49(EPT misconfiguration) because ept = 0;
 4. With ept=1 we use nested paging and with ept=0 we use shadow paging, so we see increase in exits which are used in shadow paging and a decrease in exits related to nested paging.
 
 
